@@ -8,7 +8,11 @@ namespace ASP.MVC.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            HomeModel home = new HomeModel();
+
+            home.Nome = "André";
+            home.Email = "andre@gmail.com";
+            return View(home);
         }
 
         public IActionResult Privacy()
